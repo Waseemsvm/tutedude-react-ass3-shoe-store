@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+}
+
+.appBar {
+  height: 3rem;
+  width: 100%;
+  background-color: aliceblue;
+  text-align: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.mainContainer {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.productContainer {
+  display: flex;
+  height: calc(100% - 3rem);
+}
+
+.productListContainer {
+  min-width: 60%;
+  width: 60%;
+}
+
+.cartContainer {
+  width: 40%;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: auto;
+  height: 100%;
+}
+
+.product {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+}
+
+.product .prod-img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.product .prod-desc {
+  font-weight: 900;
+}
+
+.product .prod-add-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.product .add-to-cart {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgb(3, 58, 106);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cartContainer h1 {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px groove;
+  width: 100%;
+}
+
+.cartContainer .cart-items {
+  overflow: auto;
+  margin-top: 50px;
+}
+
+.cartContainer .cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.cartContainer .cart-item img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.item-counter {
+  display: flex;
+  align-items: center;
+}
+
+.item-counter .item-counter-btn {
+  width: 1.5rem;
+}
+
+.item-counter .item-counter-val {
+  width: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.cartContainer .cart-footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+  border-top: 2px groove;
+  border-radius: 0.25rem;
+}
+
+.cartContainer .price {
+  font-weight: 900;
+}
