@@ -18,6 +18,9 @@ export default function Cart({
             incrementProductQuantity={incrementProductQuantity}
           />
         ))}
+        {
+          !products.length && "Your Cart is Empty" 
+        }
       </div>
       <div className="cart-footer">
         <p>
