@@ -142,8 +142,8 @@ body {
 .cartContainer .cart-footer {
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   height: 70px;
   background-color: white;
   width: 100%;

@@ -4,20 +4,89 @@ import Cart from "./components/Cart";
 import AppBar from "./components/AppBar";
 import "./styles/styles.css";
 
-// import productslist from "./assets/data.json";
+const productslist = [
+  {
+    id: "item1",
+    name: "Blue Classic Sneakers",
+    price: "50",
+    image: "/pic1",
+    quantity: 0,
+  },
+  {
+    id: "item2",
+    name: "Brown Sneakers",
+    price: "150",
+    image: "/pic2",
+    quantity: 0,
+  },
+  {
+    id: "item3",
+    name: "White Nike Shoes",
+    price: "75",
+    image: "/pic3",
+    quantity: 0,
+  },
+  {
+    id: "item4",
+    name: "Yello White shoes",
+    price: "20",
+    image: "/pic4",
+    quantity: 0,
+  },
+  {
+    id: "item5",
+    name: "Fancy Shoes",
+    price: "100",
+    image: "/pic5",
+    quantity: 0,
+  },
+  {
+    id: "item6",
+    name: "Brown Shoes",
+    price: "40",
+    image: "/pic6",
+    quantity: 0,
+  },
+  {
+    id: "item7",
+    name: "Brown Sandals",
+    price: "30",
+    image: "/pic7",
+    quantity: 0,
+  },
+  {
+    id: "item8",
+    name: "Red Shoes",
+    price: "80",
+    image: "/pic8",
+    quantity: 0,
+  },
+  {
+    id: "item9",
+    name: "Brown Boots",
+    price: "85",
+    image: "/pic9",
+    quantity: 0,
+  },
+  {
+    id: "item10",
+    name: "Blue Shoes",
+    price: "150",
+    image: "/pic10",
+    quantity: 0,
+  },
+  {
+    id: "item11",
+    name: "White Shoes",
+    price: "10",
+    image: "/pic11",
+    quantity: 0,
+  },
+];
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(productslist);
   const [productsInCart, setProductsInCart] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const productslist = (await import("./assets/data.json")).default;
-      productslist.forEach((p) => (p.quantity = 0));
-      setProducts(productslist);
-    }
-    fetchData();
-  }, []);
 
   const onAddItemtoCart = (item) => {
     const p = [...productsInCart].find((p) => p.id == item.id);
